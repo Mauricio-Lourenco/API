@@ -2,7 +2,6 @@
 
 from django.conf import settings
 from django.db import migrations, models
-import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -31,7 +30,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('resultado', models.CharField(max_length=150)),
-                ('voos', models.ForeignKey(on_delete=django.db.modelsdeletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+               # ('voos', models.ForeignKey(on_delete=django.db.modelsdeletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
