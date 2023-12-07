@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from ia_model.funcoes_IA import previsao
@@ -66,7 +66,7 @@ def get_by_id(request, id):
 
     if request.method == 'PUT':
 
-        SERIALIZER = VoosSerializer(voos, data=request.data)
+        serializer = VoosSerializer(voos, data=request.data)
 
         if serializer.is_valid():
             serializer.save()

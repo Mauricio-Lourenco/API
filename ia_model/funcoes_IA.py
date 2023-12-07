@@ -4,8 +4,8 @@ import pickle
 
 app = Flask(__name__)
 
-with open('ia_model\\modelo_treinado_base.pkl', 'rb') as file:
-    model = pickle.load(file)
+#with open('ia_model\\modelo_treinado_base.pkl', 'rb') as file:
+    #model = pickle.load(file)
 
 
 def previsao(dados):
